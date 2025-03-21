@@ -45,6 +45,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    Image:{
+        type: String,
+        required: true
+    },
     
 },{timestamps:true})
 exports.Content = mongoose.model("Content",UserSchema)
