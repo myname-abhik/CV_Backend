@@ -2,7 +2,7 @@ const mongo_database = require('../model/content_desc');
 exports.Insert_Content = async(req,res)=>{
     try
     {
-        const { Poster, Movie, Features, Genres, Description, Dir, Cast, Language, Year, Rating, Age, Image } = req.body;
+        const { Poster, Movie, Features, Genres, Description, Dir, Cast, Language, Year, Rating, Age, Image, Video} = req.body;
         const content = await mongo_database.Content.findOne({Movie})
         if(content)
         {
@@ -20,7 +20,8 @@ exports.Insert_Content = async(req,res)=>{
         Year,
         Rating,
         Age,
-        Image
+        Image,
+        Video
         })
         res.send(Val)
         console.log(req.body)

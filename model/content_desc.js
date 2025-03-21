@@ -49,6 +49,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    Video:{
+        type: String,
+        required: true
+    },
     
 },{timestamps:true})
 exports.Content = mongoose.model("Content",UserSchema)
