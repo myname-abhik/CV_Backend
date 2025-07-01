@@ -17,6 +17,9 @@ app.listen(PORT,()=>{
 })
 const mongo_connect = require('./model/mongo_connect.js')
 const Create_Schema = require('./model/content_desc')
+const Create_Schema_Second = require('./model/movie_pickup')
+
 
 mongo_connect.mongo_connect();
 Create_Schema.Create_Schema();
+Create_Schema_Second.Create_Schema();
